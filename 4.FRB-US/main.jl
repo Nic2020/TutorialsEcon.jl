@@ -182,8 +182,7 @@ dmp_switches
 
 #  these are their descriptions
 for s in dmp_switches
-    v = filter(x -> x.name == s, m.variables)[1]
-    println("$s : \t$(v.doc)")
+    println("$s : \t", getproperty(m, s).doc)
 end
 
 # and the docs for setting fiscal policy
@@ -194,8 +193,7 @@ dfp_switches
 
 # these are their descriptions
 for s in dfp_switches
-    v = filter(x -> x.name == s, m.variables)[1]
-    println("$s : \t$(v.doc)")
+    println("$s : \t", getproperty(m, s).doc)
 end
 
 
