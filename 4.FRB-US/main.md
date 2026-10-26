@@ -175,8 +175,7 @@ dmp_switches
 
 #  these are their descriptions
 for s in dmp_switches
-    v = filter(x -> x.name == s, m.variables)[1]
-    println("$s : \t$(v.doc)")
+    println("$s : \t", getproperty(m, s).doc)
 end
 
 @doc set_fp!
@@ -186,8 +185,7 @@ dfp_switches
 
 # these are their descriptions
 for s in dfp_switches
-    v = filter(x -> x.name == s, m.variables)[1]
-    println("$s : \t$(v.doc)")
+    println("$s : \t", getproperty(m, s).doc)
 end
 ```
 
